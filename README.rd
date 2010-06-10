@@ -1,13 +1,13 @@
-= json-syck - syck �𗘗p���������������� JSON �p�[�T
+= json-syck - syck を利用したそこそこ速い JSON パーサ
 
-  * Author: �݂�ނ� ���䂫 ((<URL:mailto:miyamuko@gmail.com>))
+  * Author: みやむこ かつゆき ((<URL:mailto:miyamuko@gmail.com>))
   * Home URL: ((<URL:http://miyamuko.s56.xrea.com/xyzzy/json-syck/intro.htm>))
   * Version: 0.1.1
 
 
 == NAME
 
-json-syck - syck �𗘗p���������������� JSON �p�[�T
+json-syck - syck を利用したそこそこ速い JSON パーサ
 
 
 == SYNOPSIS
@@ -19,17 +19,17 @@ json-syck - syck �𗘗p���������������� JSON �p�[�T
    "{\"title\":\"\\u306f\\u3066\\u306a\\u30b9\\u30bf\\u30fc\\u65e5\\u8a18\",
      \"uri\":\"http://d.hatena.ne.jp/hatenastar/\",
      \"star_count\":\"75630\"}")
-  ;;=> (("title" . "�͂ĂȃX�^�[���L") 
+  ;;=> (("title" . "はてなスター日記") 
   ;;    ("uri" . "http://d.hatena.ne.jp/hatenastar/")
   ;;    ("star_count" . 75630))
 
 
 == DESCRIPTION
 
-json-syck �� ((<syck|URL:http://code.whytheluckystiff.net/syck/>))
-�𗘗p���� JSON �p�[�T�ł��B
+json-syck は ((<syck|URL:http://code.whytheluckystiff.net/syck/>))
+を利用した JSON パーサです。
 
-�A�v���P�[�V�����͈ȉ��̃R�[�h��ǉ����邱�Ƃ� json-syck �𗘗p���邱�Ƃ��ł��܂��B
+アプリケーションは以下のコードを追加することで json-syck を利用することができます。
 
   (in-package :you-application-package)
   (require "json-syck")
@@ -38,56 +38,56 @@ json-syck �� ((<syck|URL:http://code.whytheluckystiff.net/syck/>))
 
 == INSTALL
 
-=== NetInstaller �ŃC���X�g�[��
+=== NetInstaller でインストール
 
-(1) NetInstaller �� yaml-syck �� json-syck ���C���X�g�[�����܂��B
+(1) NetInstaller で yaml-syck と json-syck をインストールします。
 
-=== NetInstaller ���g�킸�ɃC���X�g�[��
+=== NetInstaller を使わずにインストール
 
-(1) �ȉ��̃A�[�J�C�u���_�E�����[�h���܂��B
+(1) 以下のアーカイブをダウンロードします。
 
     * ((<URL:http://miyamuko.s56.xrea.com/xyzzy/archives/yaml-syck.zip>))
     * ((<URL:http://miyamuko.s56.xrea.com/xyzzy/archives/json-syck.zip>))
 
-(2) �A�[�J�C�u��W�J���āA$XYZZY �z���Ƀt�@�C�����R�s�[���܂��B
+(2) アーカイブを展開して、$XYZZY 配下にファイルをコピーします。
 
 
 == MODULE
 
 === DEPENDS
 
-json-syck �͈ȉ��̃��W���[���Ɉˑ����Ă��܂��B
+json-syck は以下のモジュールに依存しています。
 
   * ((<yaml-syck|URL:http://miyamuko.s56.xrea.com/xyzzy/json-syck/intro.htm>))
 
 === PACKAGE
 
-json-syck �͈ȉ��̃p�b�P�[�W�𗘗p���Ă��܂��B
+json-syck は以下のパッケージを利用しています。
 
   * json-syck
 
-nickname �͂���܂���B
+nickname はありません。
 
 === EXPORT
 
-json-syck �͈ȉ��̃V���{���� export ���Ă��܂��B
+json-syck は以下のシンボルを export しています。
 
-  * json-syck �p�b�P�[�W
+  * json-syck パッケージ
 
     [API]
     * ((< json-load >))
 
-    [�o�[�W����]
+    [バージョン]
     * ((< json-syck-version >))
 
-    [��O]
+    [例外]
     * ((<json-simple-error>))
     * ((<json-parse-error>))
 
 
 === CONDITION
 
-json-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
+json-syck で定義している例外の継承関係は以下のとおりです。
 
 * simple-error
   * ((< json-simple-error >))
@@ -95,21 +95,21 @@ json-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
 
 --- json-simple-error
 
-    json-syck �֘A�̂��ׂė�O�̐e�R���f�B�V�����B
+    json-syck 関連のすべて例外の親コンディション。
 
 --- json-parse-error
 
-    JSON �̃p�[�X�G���[�������������ɒʒm������O�B
+    JSON のパースエラーが発生した時に通知される例外。
 
 
 === VARIABLE
 
-�Ȃ��B
+なし。
 
 
 === COMMAND
 
-�Ȃ��B
+なし。
 
 
 === FUNCTION
@@ -119,14 +119,14 @@ json-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
     call-seq:
         (json-load str [options...])  =>  S expression
 
-    JSON �e�L�X�g��ǂݍ��� S ���ɕϊ����܂��B
+    JSON テキストを読み込み S 式に変換します。
 
-    * ���� str �ɂ� JSON �𕶎���Ŏw�肵�܂��B
-    * ������ȊO���w�肵���ꍇ�� type-error ��O��ʒm���܂�
-    * ���� options �̓p�[�T�I�v�V�������w�肵�܂��B
-      �p�[�T�I�v�V������ �L�[���[�h���X�g�Ŏw�肵�܂��B
+    * 引数 str には JSON を文字列で指定します。
+    * 文字列以外を指定した場合は type-error 例外を通知します
+    * 引数 options はパーサオプションを指定します。
+      パーサオプションは キーワードリストで指定します。
 
-    �ȉ��̃I�v�V�������w��\�ł��B
+    以下のオプションを指定可能です。
 
     * ((< null >))
     * ((< true >))
@@ -136,37 +136,37 @@ json-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
     * ((< hash-table-test >))
 
     : null
-        JSON �� null �ɑΉ����� lisp �̒l���w�肵�܂��B
+        JSON の null に対応する lisp の値を指定します。
 
-        �f�t�H���g�l�� nil �ł��B
+        デフォルト値は nil です。
 
           (json-load "name: null" :null :json-null)
           ;; => (("name" . :json-null))
 
     : true
-        JSON �� true �ɑΉ����� lisp �̒l���w�肵�܂��B
+        JSON の true に対応する lisp の値を指定します。
 
-        �f�t�H���g�l�� t �ł��B
+        デフォルト値は t です。
 
           (json-load "xyzzy: true" :true :json-true)
           ;; => (("xyzzy" . :json-true))
 
     : false
-        JSON �� false �ɑΉ����� lisp �̒l���w�肵�܂��B
+        JSON の false に対応する lisp の値を指定します。
 
-        �f�t�H���g�l�� nil �ł��B
+        デフォルト値は nil です。
 
           (json-load "xyzzy: false" :false :json-false)
           ;; => (("xyzzy" . :json-false))
 
     : seq
-        JSON �� Arrays �̃}�b�s���O���@���w�肵�܂��B
+        JSON の Arrays のマッピング方法を指定します。
 
-        * ������ :sexp �܂��� :array ���w�肵�܂��B
-        * :sexp ���w�肵���ꍇ�̓��X�g�Ƀ}�b�s���O���܂��B
-        * :array ���w�肵���ꍇ�͔z��Ƀ}�b�s���O���܂��B
+        * 引数は :sexp または :array を指定します。
+        * :sexp を指定した場合はリストにマッピングします。
+        * :array を指定した場合は配列にマッピングします。
 
-        �f�t�H���g�l��:sexp �ł��B
+        デフォルト値は:sexp です。
 
           (json-load "[1, 2, 3]" :seq :sexp)
           ;; => (1 2 3)
@@ -175,13 +175,13 @@ json-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
           ;; => #(1 2 3)
 
     : map
-        JSON �� Objects �̃}�b�s���O���@���w�肵�܂��B
+        JSON の Objects のマッピング方法を指定します。
 
-        * ������ :sexp �܂��� :hash-table ���w�肵�܂��B
-        * :sexp ���w�肵���ꍇ�͊֘A���X�g�Ƀ}�b�s���O���܂��B
-        * :hash-table ���w�肵���ꍇ�� hashtable �Ƀ}�b�s���O���܂��B
+        * 引数は :sexp または :hash-table を指定します。
+        * :sexp を指定した場合は関連リストにマッピングします。
+        * :hash-table を指定した場合は hashtable にマッピングします。
 
-        �f�t�H���g�l��:sexp �ł��B
+        デフォルト値は:sexp です。
 
           (json-load "{xyzzy: common lisp, emacs: emacs lisp}" :map :sexp)
           ;; => (("xyzzy" . "common lisp") ("emacs" . "emacs lisp"))
@@ -195,15 +195,15 @@ json-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
           ;; => "emacs lisp"
           ;;    t
 
-        ((<hash-table-test>)) ���Q�Ƃ��Ă��������B
+        ((<hash-table-test>)) も参照してください。
 
     : hash-table-test
-        hash-table �̃e�X�g�֐����w�肵�܂��B
+        hash-table のテスト関数を指定します。
 
-        * ((<map>)) �� :hash-table ���w�肵���Ƃ��̂ݗL���ȃI�v�V�����ł��B
-        * �w��\�Ȋ֐��� eq, eql, equal, equalp �ł��B
+        * ((<map>)) に :hash-table を指定したときのみ有効なオプションです。
+        * 指定可能な関数は eq, eql, equal, equalp です。
 
-        �f�t�H���g�� equal �ł��B
+        デフォルトは equal です。
 
           (setf h (json-load "{name: hogehoge}" :map :hash-table))
           ;; => #<hashtable 52893564>
@@ -233,39 +233,39 @@ json-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
     call-seq:
         (json-syck-version)  =>  "majar.minor.teeny"
 
-    json-syck (�{���C�u�����̂���) �̃o�[�W������Ԃ��܂��B
+    json-syck (本ライブラリのこと) のバージョンを返します。
 
-    �o�[�W������ major.minor.teeny �Ƃ����`���ł��B
-    ���ꂼ��̔ԍ��͕K�� 1 ���ɂ���̂ŁA�ȉ��̂悤�ɔ�r���邱�Ƃ��ł��܂�
-    (Ruby �Ɠ����ł� :-)�B
+    バージョンは major.minor.teeny という形式です。
+    それぞれの番号は必ず 1 桁にするので、以下のように比較することができます
+    (Ruby と同じです :-)。
 
         (if (string<= "1.1.0" (json-syck-version))
-            (1.1.0 �ȍ~�ŗL���ȏ���)
-          (1.1.0 ���O�̃o�[�W�����ł̏���))
+            (1.1.0 以降で有効な処理)
+          (1.1.0 より前のバージョンでの処理))
 
 
 == LIMITATIONS
 
-* JSON �`���ł� dump �̓T�|�[�g���Ă��܂���B
+* JSON 形式での dump はサポートしていません。
 
 
 == KNOWN BUGS
 
-* yaml-syck �܂��� syck ���̂̃o�O�ɂ�� xyzzy ���ƃN���b�V������\��������̂�
-  auto-save-buffers ���g���Ă��������B�B�B
+* yaml-syck または syck 自体のバグにより xyzzy ごとクラッシュする可能性があるので
+  auto-save-buffers を使ってください。。。
 
 
 == TODO
 
-* sexp->json �_���v�̃T�|�[�g (emitter)
-* syck.dll �ŃG���[�ɂȂ��Ă� xyzzy ���Ɨ����Ȃ��悤�ɂ���
-* �o�b�t�@���� load
-* �X�g���[������ load
+* sexp->json ダンプのサポート (emitter)
+* syck.dll でエラーになっても xyzzy ごと落ちないようにする
+* バッファから load
+* ストリームから load
 
 
 == AUTHOR
 
-�݂�ނ� ���䂫 (((<URL:mailto:miyamuko (at) gmail.com>)))
+みやむこ かつゆき (((<URL:mailto:miyamuko (at) gmail.com>)))
 
 
 == SEE ALSO
@@ -273,13 +273,13 @@ json-syck �Œ�`���Ă����O�̌p���֌W�͈ȉ��̂Ƃ���ł��B
   : RFC 4627 The application/json Media Type for JavaScript Object Notation (JSON)
         ((<URL:http://tools.ietf.org/html/rfc4627>))
 
-  : JSON �̏Љ�
+  : JSON の紹介
         ((<URL:http://www.json.org/json-ja.html>))
 
 
 == COPYRIGHT
 
-json-syck �� MIT/X ���C�Z���X�ɂ��������ė��p�\�ł��B
+json-syck は MIT/X ライセンスにしたがって利用可能です。
 
 See json-syck/docs/MIT-LICENSE for full license.
 

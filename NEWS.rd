@@ -2,66 +2,66 @@
 
 === 2008-07-12 / 0.1.1
 
-json-syck 0.1.1 �����[�X!
+json-syck 0.1.1 リリース!
 
-: �V�K�@�\
+: 新規機能
 
-    * �Ȃ�
+    * なし
 
-: ��݊����܂ޕύX�_
+: 非互換を含む変更点
 
-    * �Ȃ�
+    * なし
 
-: �o�O�C��
+: バグ修正
 
-    * �Ȃ�
+    * なし
 
-: ���̑�
+: その他
 
-    * ���C�Z���X�t�@�C���𓯍�
+    * ライセンスファイルを同梱
 
 
 === 2008-02-03 / 0.1.0
 
-json-syck 0.1.0 �����[�X!
+json-syck 0.1.0 リリース!
 
-: �V�K�@�\
+: 新規機能
 
-    * �Ȃ�
+    * なし
 
-: ��݊����܂ޕύX�_
+: 非互換を含む変更点
 
-    * �Ȃ�
+    * なし
 
-: �o�O�C��
+: バグ修正
 
-    * �f�o�b�O�R�[�h���폜
+    * デバッグコードを削除
 
 
 === 2008-01-22 / 0.0.2
 
-json-syck 0.0.2 �����[�X!
+json-syck 0.0.2 リリース!
 
-: �V�K�@�\
+: 新規機能
 
-    * �Ȃ�
+    * なし
 
-: ��݊����܂ޕύX�_
+: 非互換を含む変更点
 
-    * �Ȃ�
+    * なし
 
-: �o�O�C��
+: バグ修正
 
-    * json-load �� parse �G���[���������Ă����Ƃ��� yaml-syck:yaml-parse-error
-      ���ʒm����Ă��������C���Bjson-syck:json-parse-error �ɕύX�B
+    * json-load で parse エラーが発生していたときに yaml-syck:yaml-parse-error
+      が通知されていた問題を修正。json-syck:json-parse-error に変更。
 
-: ���̑�
+: その他
 
-    * ����� JSON ��n�����ꍇ�̃������g�p�ʂ����Ԃ�팸�B
+    * 巨大な JSON を渡した場合のメモリ使用量をたぶん削減。
 
 
 === 2008-01-21 / 0.0.1
 
-json-syck 0.0.1 �����[�X!
+json-syck 0.0.1 リリース!
 
 =end

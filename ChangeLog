@@ -2,7 +2,7 @@
 
 	* json-syck 0.1.1 released!
 
-	* ���C�Z���X�t�@�C���𓯍�
+	* ライセンスファイルを同梱
 
 2008-02-03  MIYAMUKO Katsuyuki
 
@@ -16,30 +16,30 @@
 
 2008-01-21  MIYAMUKO Katsuyuki
 
-	* �������g�p�ʍ팸�̂��� 8K �o�C�g�ȏ�̓t�@�C���ɕۑ����� parse
+	* メモリ使用量削減のため 8K バイト以上はファイルに保存して parse
 
-	* (json-load): ��O���� typo ���C���B
+	* (json-load): 例外名の typo を修正。
 
 	* json-syck 0.0.1 released!
 
-	* ������x�[�X�̏����͏d�������̂Ńo�b�t�@�x�[�X�ōĎ����B�B�Borz
+	* 文字列ベースの処理は重すぎたのでバッファベースで再実装。。。orz
 
 2008-01-20  MIYAMUKO Katsuyuki
 
-	* :report ���Ȃ��ƃo�C�g�R���p�C���ł��Ȃ��B
+	* :report がないとバイトコンパイルできない。
 
 	* export json-simple-error, json-parse-error.
 
 	* (json-syck-version): rename from json-syck-xyzzy-binding-version.
-	  syck �̃o�[�W������ yaml-syck �𒼐ڎg���āB
+	  syck のバージョンは yaml-syck を直接使って。
 
-	* �G���[������ǉ��B
+	* エラー処理を追加。
 
-	* (D, D0): �}�N���ɂ��Ď��Ԃ��v��
+	* (D, D0): マクロにして時間を計る
 
-	* (*quoted-string-regexp*): loop �W�J�����������̂ŕ��ʂɏ������B
+	* (*quoted-string-regexp*): loop 展開がおかしいので普通に書いた。
 
-	* (json-load): �Ƃ肠���������B��O����͂Ă��Ƃ�
+	* (json-load): とりあえず実装。例外周りはてきとう
 
 	* add version.l
 
@@ -51,5 +51,5 @@
 
 2008-01-19  MIYAMUKO Katsuyuki
 
-	* json-syck �쐬�J�n
+	* json-syck 作成開始
 
