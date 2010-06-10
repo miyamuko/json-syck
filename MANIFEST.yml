@@ -21,5 +21,4 @@ files:
     - site-lisp/json-syck/docs/**/*.*
     - site-lisp/json-syck/src/**/*.*
   exclude:
-    - site-lisp/json-syck-scratch.l
     - site-lisp/json-syck/tests/*.*
